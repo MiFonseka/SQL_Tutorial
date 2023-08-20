@@ -1,0 +1,49 @@
+/*
+Select Statements
+*, Top, Distinct, Count, As, Max, Min, Avg
+*/
+
+Select all information from a table
+
+SELECT *
+FROM EmployeeDemographics
+
+Select top 5 rows from a table
+
+SELECT TOP 5 *
+FROM EmployeeDemographics
+
+Select especific information from a table
+
+SELECT FirstName, LastName
+From EmployeeDemographics
+
+Select distinct information from a table
+
+SELECT Distinct(EmployeeID)
+FROM EmployeeDemographics
+
+Count the number of something in a table, the "as" gives the new table a name
+
+SELECT COUNT(LastName) AS LastNameCount
+FROM EmployeeDemographics
+
+Select the Max number in a table
+
+SELECT MAX(Salary)
+FROM EmployeeSalary
+
+Select the Min number in a table
+
+SELECT MIN(Salary)
+FROM EmployeeSalary
+
+Select the Average number in a table
+
+SELECT AVG(Salary)
+FROM EmployeeSalary
+
+When we are not in the especified database, we need to especify the path to the database
+
+SELECT*
+FROM [SQL Tutorial].dbo.EmployeeDemographics
