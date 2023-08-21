@@ -1,0 +1,15 @@
+/*
+Partition By
+*/
+
+SELECT *
+FROM SQLTutorial.dbo.EmployeeDemographics
+
+SELECT *
+FROM SQLTutorial.dbo.EmployeeSalary
+
+SELECT FirstName, LastName, Gender, Salary
+, COUNT(Gender) OVER (Partition by Gender) as TotalGender
+FROM SQLTutorial..EmployeeDemographics dem
+JOIN SQLTutorial..EmployeeSalary sal
+	ON dem.EmployeeID = sal.EmployeeID
