@@ -1,0 +1,64 @@
+/*
+Where Statements
+=, <>, <, >, And, Or, Like, Null, Not Null, In
+*/
+
+Search for information equal to the name
+
+SELECT *
+From EmployeeDemographics
+WHERE FirstName = 'Miguel'
+
+Search for information not equal to the name
+
+SELECT *
+From EmployeeDemographics
+WHERE FirstName <> 'Miguel'
+
+Select the employees with more than 30, if we want to see the ones with 30 to we need to use ">="
+
+SELECT *
+From EmployeeDemographics
+WHERE Age > 30
+
+Select the employees with less than 30, if we want to see the ones with 30 to we need to use "<="
+
+SELECT *
+From EmployeeDemographics
+WHERE Age < 30
+
+Select the employees with more than 30 and male
+
+SELECT *
+From EmployeeDemographics
+WHERE Age > 30 AND Gender = 'Male'
+
+With OR only one needs to be true
+
+SELECT *
+From EmployeeDemographics
+WHERE Age > 30 OR Gender = 'Male'
+
+Search for a last name that starts with an "F"
+
+SELECT *
+From EmployeeDemographics
+WHERE LastName LIKE 'F%'
+
+Show the employees with the last name missing
+
+SELECT *
+From EmployeeDemographics
+WHERE LastName is NULL
+
+Show the employees with the last name write
+  
+SELECT *
+From EmployeeDemographics
+WHERE LastName is NULL
+
+IS is like the equal sign but can be use with more than one conditional
+
+SELECT *
+From EmployeeDemographics
+WHERE FirstName IN ('Miguel', 'Pam')
