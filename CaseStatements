@@ -1,0 +1,25 @@
+/*
+Case Statements
+*/
+
+SELECT FirstName, LastName, Age,
+CASE
+	WHEN Age > 30 THEN 'Old'
+	WHEN Age BETWEEN 27 AND 30 THEN 'Young'
+	ELSE 'Baby'
+END
+FROM SQLTutorial.dbo.EmployeeDemographics
+WHERE Age is NOT NULL
+Order By Age
+
+
+SELECT FirstName, LastName, Jobtitle, Salary,
+CASE
+	WHEN Jobtitle = 'Salesman' THEN Salary + (Salary * 0.10)
+	WHEN Jobtitle = 'Accountant' THEN Salary + (Salary * 0.05)
+	WHEN Jobtitle = 'HR' THEN Salary + (Salary * 0.000001)
+	ELSE Salary + (Salary * 0.03)
+END AS SalaryAfterRaise
+FROM SQLTutorial.dbo.EmployeeDemographics
+JOIN SQLTutorial.dbo.EmployeeSalary
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
