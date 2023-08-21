@@ -27,3 +27,8 @@ SELECT *
 FROM EmployeeDemographics
 Right Outer Join EmployeeSalary
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTittle, Salary
+FROM EmployeeDemographics
+Left Outer Join EmployeeSalary
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
