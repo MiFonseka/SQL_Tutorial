@@ -1,0 +1,18 @@
+/*
+CTEs are like functions in Python 
+*/
+
+WITH CTE_Employee AS 
+(SELECT FirstName, LastName, Gender, Salary
+, COUNT(Gender) OVER (Partition by Gender) as TotalGender
+, AVG(Salary) OVER (PARTITION BY Salary) as AvgSalary
+FROM SQLTutorial..EmployeeDemographics dem
+JOIN SQLTutorial..EmployeeSalary sal
+	ON dem.EmployeeID = sal.EmployeeID
+WHERE Salary > '45000'
+)
+Select *
+FROM CTE_Employee
+
+SELECT FirstName, AvgSalary
+FROM CTE_Employee
