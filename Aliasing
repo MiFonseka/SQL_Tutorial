@@ -1,0 +1,16 @@
+/*
+Aliasing
+*/
+
+Clean querys and named to better understanding
+
+SELECT FirstName + ' ' + LastName AS FullName
+FROM SQLTutorial.dbo.EmployeeDemographics
+
+SELECT AVG(Age) AS AvgAge
+FROM SQLTutorial.dbo.EmployeeDemographics
+
+SELECT Demo.EmployeeID
+FROM SQLTutorial.dbo.EmployeeDemographics AS Demo
+Join SQLTutorial.dbo.EmployeeSalary AS Sal
+	ON Demo.EmployeeID = Sal.EmployeeID
