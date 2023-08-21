@@ -1,0 +1,29 @@
+/*
+Inner Join, Full/Left/Right/ Outer Joins
+*/
+
+Select *
+FROM EmployeeDemographics
+
+Select *
+FROM EmployeeSalary
+
+SELECT *
+FROM EmployeeDemographics
+Inner Join EmployeeSalary
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+SELECT *
+FROM EmployeeDemographics
+FULL Outer Join EmployeeSalary
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+SELECT *
+FROM EmployeeDemographics
+Left Outer Join EmployeeSalary
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+SELECT *
+FROM EmployeeDemographics
+Right Outer Join EmployeeSalary
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
