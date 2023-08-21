@@ -1,0 +1,21 @@
+/*
+Group By, Order By
+*/
+
+Select all the Gender data groupoing it by Gender
+
+SELECT Gender
+FROM EmployeeDemographics
+GROUP BY Gender
+
+Order the information by Age
+
+SELECT *
+FROM EmployeeDemographics
+ORDER BY Age
+
+We can use the number of the column instead of the name
+
+SELECT *
+FROM EmployeeDemographics
+ORDER BY 1 DESC
